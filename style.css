@@ -1,0 +1,155 @@
+:root{
+    --size: 600px;
+    --paddingSize :1px;    
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+    
+}
+
+.ring{
+    pointer-events: none;     
+}
+
+#mechanicalWatch{
+    
+    width: var(--size);
+    height: var(--size);
+    /*background-color: black;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+
+
+#mechanicalWatch .ring{
+    border-radius: 50%;
+    position: absolute;
+    
+}
+
+#mechanicalWatch .ring>div{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+}
+
+#outerRing{
+    width: 80%;
+    height: 80%;     
+    background-color: grey;  
+    background-image: url("./assets/metal.jpg");   
+    font-size: calc(var(--size)/40);
+    box-shadow: 6px 6px 8px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+#outerRing>div{ 
+    color: green;
+}
+
+#outerRing>div:first-child{
+    color: red;
+}
+
+#hourRing{    
+    width: 75%;
+    height: 75%;     
+    background-color: white; 
+    border: 1px solid black;
+    font-size: calc(var(--size)/50);
+}
+
+#minutesRing{
+    width: 65%;
+    height: 65%;     
+    background-color: white;
+    border: 1px solid black;
+    font-size: calc(var(--size)/50);
+
+}
+
+#secondsRing{
+    width: 55%;
+    height: 55%;     
+    background-color: white;
+    border: 1px solid black;
+    font-size: calc(var(--size)/50);
+}
+
+.setter{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    pointer-events: none; 
+}
+
+#middleBtn{
+    position: absolute;
+    
+}
+
+#middleBtn>.verticalRod{
+    height:calc(var(--size)/12.5);
+    overflow: hidden;
+    transition: all 0.15s ease-in;
+    
+
+}
+
+#middleBtn>.verticalRod div{
+    font-size: calc(var(--size)/70);
+    height: calc(var(--size)/50);
+    text-align: center;
+    color:black;
+    border-bottom: 1px solid red;
+    cursor: pointer;
+}
+
+
+
+#leftBtn{
+    position: absolute;   
+    transform: rotate(-30deg);   
+     
+}
+
+#rightBtn{
+    position: absolute;
+    transform: rotate(30deg);
+
+}
+
+.verticalRod{
+    cursor: pointer; 
+    position: absolute;
+    pointer-events: auto !important; 
+    bottom: 50%;
+    margin-bottom: 40%;
+    left: 50%;
+    transform: translate(-50%, 0);     
+    height:calc((var(--size)/12.5)*0.75);
+    width: calc(var(--size)/30);    
+    background-color: grey;  
+    background-image: url("./assets/metal.jpg"); 
+    border-radius: 5px 5px 0 0;
+    transition: all 0.1s ease-in;
+    box-shadow: 6px 6px 8px 4px rgba(0, 0, 0, 0.2);
+}
+
+#leftBtn>.verticalRod{
+    transition: all 0.05s ease-in;
+}
+
+#leftBtn>.verticalRod:active{
+    height:calc((var(--size)/12.5)*0.5)
+}
