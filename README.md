@@ -1,2 +1,3 @@
 # Timer
-# Small project to train JS OOP
+
+Small project to train JS OOP
